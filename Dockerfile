@@ -18,7 +18,10 @@ RUN apt-get update && \
 
 WORKDIR /app
 COPY . .
-RUN pip lock
-RUN pip sync --locked
+# Copy the requirements file
+COPY requirements.txt .
+
+# Install dependencies using the standard Python tool
+RUN python3 -m pip install --no-cache-dir -r requirements.txt
 RUN chmod +x start.sh
 CMD ["bash", "start.sh"]
