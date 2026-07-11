@@ -14,5 +14,8 @@ RUN python -m pip install --no-cache-dir -r requirements.txt
 COPY . .
 RUN ls -R /app
 # Run the bot
-CMD ["python", "-m", "backend.main"]
+# Debug: List all files in the container to see where main.py is
+RUN find . -maxdepth 3 -not -path '*/.*'
 
+# Run the bot
+CMD ["python", "backend/main.py"]
