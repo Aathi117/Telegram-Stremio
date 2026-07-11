@@ -14,4 +14,4 @@ RUN python -m pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Run the bot
-CMD ["python", "main.py"]9
+CMD ["python", "-m", "backend.main"]
