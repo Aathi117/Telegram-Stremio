@@ -12,7 +12,7 @@ RUN python -m pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of your files
 COPY . .
-
+RUN ls -R /app
 # Run the bot
 CMD ["python", "-m", "backend.main"]
 
