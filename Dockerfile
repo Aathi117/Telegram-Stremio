@@ -18,7 +18,7 @@ RUN apt-get update && \
 
 WORKDIR /app
 COPY . .
-RUN uv lock
-RUN uv sync --locked
+RUN pip lock
+RUN pip sync --locked
 RUN chmod +x start.sh
 CMD ["bash", "start.sh"]
