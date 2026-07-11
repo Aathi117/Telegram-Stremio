@@ -15,3 +15,4 @@ COPY . .
 
 # Run the bot
 CMD ["python", "-m", "backend.main"]
+
